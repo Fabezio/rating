@@ -2,6 +2,7 @@
 	import Rating from './Rating.svelte'
 	export let name
 	let rating = 3
+	
 </script>
 
 <main>
