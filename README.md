@@ -93,7 +93,12 @@ surge public my-project.surge.sh
 ```
 
 
-About Rating:
+### About Rating:
 
 this is a rating single compo template
+
+```bash
+simply change number or add a form to adapt this compo as you like
+```
+
 more information coming soon
