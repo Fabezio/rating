@@ -91,3 +91,9 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+
+About Rating:
+
+this is a rating single compo template
+more information coming soon
