@@ -1,15 +1,17 @@
 <script>
   export let rating = 0 
   if (typeof rating != 'number') rating = parseInt(rating)
-  let rest = 5 - rating
+  // let rest = 5 - rating
   // let icon
   let error = false
   let icons = []
-  let emptyIcons = []
+  // let emptyIcons = []
   $: {
     icons.length = rating
-    emptyIcons.length = rest
-
+    icons.length = 5
+    icons.fill('far')
+    icons.fill('fas', 0, rating)
+  
   }
   // $: {
   //   if(rating < 0 || rating > 5 ) error = true
@@ -39,12 +41,9 @@
   <div class="mp-quarter">
   {#each icons as icon, i}
     <!-- content here -->
-    <i class="star fas fa-star"></i>
+    <i class="star {icon} fa-star"></i>
   {/each}
-  {#each emptyIcons as icon, i}
-    <!-- content here -->
-    <i class="star far fa-star"></i>
-  {/each}
+
   </div>
     
 {/if}
