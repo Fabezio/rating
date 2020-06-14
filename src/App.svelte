@@ -2,7 +2,7 @@
 	import Rating from './Rating.svelte'
 	export let name
 	let rating = 3
-	
+	let icon = 'heart'
 </script>
 
 <main>
@@ -14,7 +14,7 @@
 	{:else}
 	<div class="">
 		<div class="rating">
-			<Rating class="" {rating} />
+			<Rating {icon} {rating} />
 		</div>
 	</div>
 	{/if}

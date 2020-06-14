@@ -1,27 +1,29 @@
 <script>
   export let rating = 0 
+  export let icon = ''
   if (typeof rating != 'number') rating = parseInt(rating)
   let error = false
-  let icons = []
+  let modes = []
 
   $: {
-    icons.length = rating
-    icons.length = 5
-    icons.fill('far')
-    icons.fill('fas', 0, rating)
+    modes.length = rating
+    modes.length = 5
+    modes.fill('far')
+    modes.fill('fas', 0, rating)
+    console.log(icon)
   }
   
 </script>
 
 {#if rating == 5}
-  <i class=" star fas fa-star fa-5x"></i>
+  <i class="{icon} fas fa-{icon} fa-fw fa-5x"></i>
 
 {:else if rating == 0}
-  <i class="star nearly-hidden far fa-star fa-5x"></i>
+  <i class="{icon} nearly-hidden far fa-{icon} fa-fw fa-5x"></i>
 {:else}
   <div class="mp-quarter">
-  {#each icons as icon, i}
-    <i class="star {icon} fa-star"></i>
+  {#each modes as mode, i}
+    <i class="{icon} {mode} fa-{icon} fa-fw fa-2x"></i>
   {/each}
 
   </div>
@@ -48,6 +50,13 @@
     padding: 0 0.25rem;
     margin: 0 .25rem;
 
+  }
+
+  .heart {
+    color: red;
+  }
+  i {
+    /* padding: 0.25rem; */
   }
 </style>
 
