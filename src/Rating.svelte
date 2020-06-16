@@ -55,8 +55,14 @@
   .heart {
     color: red;
   }
+  .thumbs-up {
+    color: deepskyblue;
+  }
   i {
     /* padding: 0.25rem; */
+  }
+  .smile-beam {
+    color: gold;
   }
 </style>
 

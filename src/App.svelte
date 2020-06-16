@@ -2,7 +2,7 @@
 	import Rating from './Rating.svelte'
 	export let name
 	let rating = 3
-	let icon = 'heart'
+	let icon = 'smile-beam'
 </script>
 
 <main>
